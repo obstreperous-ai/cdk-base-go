@@ -1,4 +1,4 @@
-# cdk-base-go
+# CDK Base Go
 Template for CDK Go repositories
 
 ## Dev Container / Codespaces
