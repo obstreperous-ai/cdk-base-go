@@ -1,21 +1,27 @@
 {
-  "name": "cdk-base-go",
-  "image": "mcr.microsoft.com/devcontainers/go:1-1.23-bookworm",
+  "name": "cdk-go-tdd",
+  "image": "mcr.microsoft.com/devcontainers/go:1.25-bookworm",
   "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {},
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "lts"
+      "version": "22"
     },
-    "ghcr.io/devcontainers/features/aws-cli:1": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {}
+    "ghcr.io/devcontainers/features/aws-cli:1": {}
   },
-  "postCreateCommand": "npm install -g aws-cdk",
   "customizations": {
     "vscode": {
+      "settings": {
+        "go.useLanguageServer": true,
+        "go.testFlags": [
+          "-v"
+        ],
+        "editor.formatOnSave": true
+      },
       "extensions": [
         "golang.go",
-        "amazonwebservices.aws-toolkit-vscode"
+        "AmazonWebServices.aws-toolkit-vscode"
       ]
     }
-  }
+  },
+  "postCreateCommand": "npm install -g aws-cdk",
+  "remoteUser": "vscode"
 }
