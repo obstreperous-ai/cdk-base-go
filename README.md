@@ -1,13 +1,12 @@
-# CDK Base Go
-Template for CDK Go repositories
+# Welcome to your CDK Go project!
 
-## Dev Container / Codespaces
+This is a blank project for CDK development with Go.
 
-This repository includes a devcontainer at `.devcontainer/devcontainer.json` for CDK Go development in GitHub Codespaces or any Dev Containers-compatible environment.
+The `cdk.json` file tells the CDK toolkit how to execute your app.
 
-Included tooling:
-- Go (base image)
-- Node.js (LTS) + `aws-cdk` CLI
-- AWS CLI
-- GitHub CLI
-- Common CLI utilities
+## Useful commands
+
+ * `cdk deploy`      deploy this stack to your default AWS account/region
+ * `cdk diff`        compare deployed stack with current state
+ * `cdk synth`       emits the synthesized CloudFormation template
+ * `go test`         run unit tests
